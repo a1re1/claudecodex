@@ -1,0 +1,23 @@
+[package]
+name = "claudecodex"
+version = "0.1.0"
+edition = "2021"
+description = "Anthropic Messages API proxy for Codex (ChatGPT login) models, for Claude Code"
+license = "MIT"
+
+[dependencies]
+anyhow = "1"
+axum = "0.7"
+bytes = "1"
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4", features = ["derive", "env"] }
+futures-util = "0.3"
+reqwest = { version = "0.12", default-features = false, features = ["json", "stream", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tokio = { version = "1", features = ["full"] }
+tokio-stream = "0.1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1", features = ["v4"] }
